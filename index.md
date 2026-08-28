@@ -4,7 +4,7 @@ title: Home
 permalink: /
 ---
 
-<p class="intro">I study education, labour markets, and applied econometrics, with particular interest in the transition from education to the labour market.</p>
+<p class="intro">I study education, labor markets, and applied econometrics, with particular interest in the transition from education to the labor market. </p>
 
 <h2 id="about">About</h2>
 <p>I am a PhD student in Economics at Uppsala University. I have previously worked at Institute for Structural Research. My research lies at the intersection of education, labor economics, and applied econometrics.</p>
@@ -12,8 +12,7 @@ permalink: /
 <h2 id="research">Research</h2>
 
 <h3>Working paper</h3>
-<p><strong>Entry Motivations Shape Preferences for Social Protection Among Platform Workers</strong><br>with Zuzanna Kowalik, Piotr Lewandowski, Fabrizio Pompei, Holger Stichnoth and Laurène Thil</em>.</p>
-
+<p><strong>Entry Motivations Shape Preferences for Social Protection Among Platform Workers</strong><br>with Zuzanna Kowalik, Piotr Lewandowski, Fabrizio Pompei, Holger Stichnoth and Laurène Thil.</p>
 
 
 <h3>Publication</h3>
