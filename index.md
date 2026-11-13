@@ -4,19 +4,34 @@ title: Home
 permalink: /
 ---
 
-<p class="intro">I study education, labor markets, and applied econometrics, with particular interest in the transition from education to the labor market. </p>
+<section class="intro">
+<p>Welcome!</p>
+<p>I am a PhD student in Economics at Uppsala University. I study education, labor markets, and applied econometrics, with particular interest in the transition from education to the labor market.</p>
+<p>Before starting my PhD, I worked at the Institute for Structural Research.</p>
+</section>
 
-<h2 id="about">About</h2>
-<p>I am a PhD student in Economics at Uppsala University. I have previously worked at Institute for Structural Research. My research lies at the intersection of education, labor economics, and applied econometrics.</p>
+<section id="research">
+<h2>Working Papers</h2>
 
-<h2 id="research">Research</h2>
+<article class="paper">
+  <h3>Entry Motivations Shape Preferences for Social Protection Among Platform Workers</h3>
+  <p class="meta">with Zuzanna Kowalik, Piotr Lewandowski, Fabrizio Pompei, Holger Stichnoth and Laurène Thil</p>
+</article>
+</section>
 
-<h3>Working paper</h3>
-<p><strong>Entry Motivations Shape Preferences for Social Protection Among Platform Workers</strong><br>with Zuzanna Kowalik, Piotr Lewandowski, Fabrizio Pompei, Holger Stichnoth and Laurène Thil.</p>
+<section id="publications">
+<h2>Publications</h2>
 
+<article class="paper">
+  <h3>Automation, Trade Unions and Atypical Employment</h3>
+  <p class="meta">with Piotr Lewandowski</p>
+  <p class="meta"><em>Industrial Relations: A Journal of Economy and Society</em>, 2026, 65(3): 378–396</p>
+</article>
+</section>
 
-<h3>Publication</h3>
-<p>Lewandowski, P. and <strong>Szymczak, W.</strong> 2026. “Automation, Trade Unions and Atypical Employment.” <em>Industrial Relations: A Journal of Economy and Society</em> 65(3): 378–396.</p>
-
-<h2 id="contact">Contact</h2>
-<p><a href="mailto:wojciech.szymczak@nek.uu.se">wojciech.szymczak@nek.uu.se</a><br>Uppsala University, Uppsala, Sweden</p>
+<section id="contact">
+<h2>Contact</h2>
+<p><a href="mailto:wojciech.szymczak@nek.uu.se">wojciech.szymczak@nek.uu.se</a><br>
+Department of Economics, Uppsala University<br>
+Uppsala, Sweden</p>
+</section>
