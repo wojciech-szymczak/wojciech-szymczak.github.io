@@ -3,64 +3,194 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} · {% endif %}Wojciech Szymczak</title>
-  <meta name="description" content="PhD student in Economics at Uppsala University">
+  <title>Wojciech Szymczak</title>
+  <meta name="description" content="Wojciech Szymczak, PhD student in Economics at Uppsala University">
+  <meta property="og:title" content="Wojciech Szymczak">
+  <meta property="og:description" content="PhD student in Economics at Uppsala University">
+  <meta property="og:image" content="{{ site.url }}/images/Szymczak_ZDJ.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
   <style>
-    :root { --ink: #272727; --muted: #737373; --line: #e5e5e5; --accent: #206a5d; }
+    :root {
+      --bg: #ffffff; --bar: rgba(255,255,255,.96); --ink: #2b2b2b; --head: #1a1a1a;
+      --muted: #6b6b6b; --line: #e3e3e3; --accent: #1565c0; --accent-soft: rgba(21,101,192,.08);
+      --shadow: 0 1px 6px rgba(0,0,0,.12);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #16181c; --bar: rgba(22,24,28,.96); --ink: #d9d9d9; --head: #f2f2f2;
+        --muted: #9a9a9a; --line: #30333a; --accent: #64a8f0; --accent-soft: rgba(100,168,240,.12);
+        --shadow: 0 1px 6px rgba(0,0,0,.5);
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #16181c; --bar: rgba(22,24,28,.96); --ink: #d9d9d9; --head: #f2f2f2;
+      --muted: #9a9a9a; --line: #30333a; --accent: #64a8f0; --accent-soft: rgba(100,168,240,.12);
+      --shadow: 0 1px 6px rgba(0,0,0,.5);
+    }
+
     * { box-sizing: border-box; }
-    body { margin: 0; color: var(--ink); background: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.68; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: "Source Serif 4", "Source Serif Pro", Georgia, serif;
+      font-size: 18px; line-height: 1.65;
+      transition: background-color .2s, color .2s;
+    }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .site-panel { position: fixed; inset: 0 auto 0 0; width: 330px; padding: 4.5rem 3.25rem 2.5rem; border-right: 1px solid var(--line); background: #fafafa; text-align: center; overflow-y: auto; }
-    .profile-photo { width: 108px; height: 108px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 1.25rem; }
-    .site-panel h1 { margin: 0; font-family: Georgia, serif; font-size: 1.82rem; font-weight: 500; line-height: 1.18; }
-    .role { margin: .8rem 0 1.65rem; color: var(--muted); font-size: .95rem; line-height: 1.45; }
-    .rule { border: 0; border-top: 1px solid var(--line); margin: 1.3rem 0; }
-    .site-nav { display: grid; gap: .5rem; }
-    .site-nav a { color: var(--ink); font-size: .96rem; }
-    .site-nav a:hover { color: var(--accent); text-decoration: none; }
-    .social { display: flex; justify-content: center; gap: 1rem; font-size: .92rem; }
-    .page { margin-left: 330px; }
-    .content { max-width: 770px; padding: 5rem 4rem; }
-    .content h2 { margin: 3.15rem 0 1rem; padding-bottom: .55rem; border-bottom: 1px solid var(--line); font-family: Georgia, serif; font-size: 1.55rem; font-weight: 500; }
-    .content h2:first-child { margin-top: 0; }
-    .content h3 { margin: 1.65rem 0 .35rem; font-size: 1.03rem; font-weight: 650; }
-    .content p { margin: 0 0 1.1rem; }
-    .content ul { margin: .4rem 0 0; padding-left: 1.25rem; }
-    .content li { margin-bottom: .6rem; }
-    .intro { font-family: Georgia, serif; font-size: 1.3rem; line-height: 1.6; color: #414141; }
-    .copyright { margin-top: 2.5rem; color: var(--muted); font-size: .82rem; }
-    @media (max-width: 780px) {
-      .site-panel { position: static; width: 100%; padding: 2.5rem 1.5rem; border-right: 0; border-bottom: 1px solid var(--line); }
-      .page { margin-left: 0; }
-      .content { max-width: 700px; padding: 2.75rem 1.5rem; margin: 0 auto; }
+
+    /* Top bar */
+    .topbar { position: sticky; top: 0; z-index: 10; background: var(--bar); box-shadow: var(--shadow); backdrop-filter: blur(6px); }
+    .topbar-inner { max-width: 1000px; margin: 0 auto; padding: 0 1.25rem; height: 62px; display: flex; align-items: center; gap: 1.5rem; }
+    .brand { font-weight: 600; font-size: 1.15rem; color: var(--head); white-space: nowrap; }
+    .brand:hover { text-decoration: none; }
+    .menu { list-style: none; margin: 0 0 0 auto; padding: 0; display: flex; gap: 1.6rem; overflow-x: auto; scrollbar-width: none; }
+    .menu::-webkit-scrollbar { display: none; }
+    .menu a { color: var(--ink); white-space: nowrap; font-size: 1.05rem; }
+    .menu a:hover, .menu a.active { color: var(--accent); text-decoration: none; }
+    .theme-toggle { border: 0; background: none; color: var(--muted); font-size: 1.2rem; cursor: pointer; padding: .3rem; }
+    .theme-toggle:hover { color: var(--accent); }
+
+    /* Main column */
+    .container { max-width: 760px; margin: 0 auto; padding: 0 1.25rem; }
+    .profile { text-align: center; padding: 3.2rem 0 1.4rem; }
+    .avatar { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 1.4rem; }
+    .profile h1 { margin: 0; color: var(--head); font-size: 2.1rem; font-weight: 700; line-height: 1.2; }
+    .role { margin: .6rem 0 1.1rem; color: var(--muted); font-size: 1.1rem; line-height: 1.5; }
+    .social { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 1.3rem; font-size: 1.6rem; }
+    .social a:hover { opacity: .75; text-decoration: none; }
+
+    section { padding-top: .6rem; }
+    h2 { margin: 2.6rem 0 1.3rem; padding-bottom: .5rem; border-bottom: 1px solid var(--line); color: var(--head); font-size: 1.75rem; font-weight: 400; font-style: italic; }
+    h3 { margin: 1.6rem 0 .25rem; color: var(--head); font-size: 1.12rem; font-weight: 700; line-height: 1.35; }
+    h3 a { color: inherit; }
+    p { margin: 0 0 1rem; }
+    .intro { margin-top: 1.6rem; }
+    .meta { color: var(--muted); font-size: .95rem; margin: 0; }
+    .meta em { color: var(--ink); }
+    .paper { margin-bottom: 1.8rem; }
+    .btns { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .45rem; }
+    .btn { display: inline-block; border: 1px solid var(--accent); border-radius: 3px; background: transparent; color: var(--accent); font: inherit; font-size: .82rem; padding: .1rem .6rem; cursor: pointer; }
+    .btn:hover { background: var(--accent-soft); text-decoration: none; }
+    .abstract { margin-top: .7rem; padding: .8rem 1rem; border-left: 3px solid var(--line); color: var(--ink); font-size: .95rem; }
+
+    /* Painting */
+    .painting { margin: 4rem 0 0; }
+    .painting img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .painting figcaption { margin-top: .6rem; color: var(--muted); font-size: .88rem; text-align: center; font-style: italic; }
+
+    footer { margin: 2.5rem 0 0; padding: 1.6rem 0 2.4rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; text-align: center; }
+
+    @media (max-width: 640px) {
+      body { font-size: 17px; }
+      .brand { display: none; }
+      .menu { margin-left: 0; gap: 1.1rem; }
+      .avatar { width: 160px; height: 160px; }
+      .profile h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
-<body>
-  <aside class="site-panel">
-    <a href="/"><img class="profile-photo" src="/images/Szymczak_ZDJ.jpg" alt="Portrait of Wojciech Szymczak"></a>
-    <h1><a href="/">Wojciech Szymczak</a></h1>
-    <p class="role">PhD student in Economics<br>Uppsala University</p>
-    <hr class="rule">
-    <nav class="site-nav" aria-label="Site navigation">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Contact</a>
-      <a href="/files/CV_Szymczak.pdf">CV</a>
+<body id="top">
+  <header class="topbar">
+    <nav class="topbar-inner" aria-label="Main">
+      <a class="brand" href="#top">Wojciech Szymczak</a>
+      <ul class="menu">
+        <li><a href="#top" data-section="about" class="active">Home</a></li>
+        <li><a href="/files/CV_Szymczak.pdf">CV</a></li>
+        <li><a href="#research" data-section="research">Research</a></li>
+        <li><a href="#publications" data-section="publications">Publications</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark mode">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+      </button>
     </nav>
-    <hr class="rule">
-    <div class="social">
-      <a href="mailto:wojciech.szymczak@nek.uu.se">Email</a>
-      <a href="https://scholar.google.com/citations?user=w1tir28AAAAJ&amp;hl=pl">Scholar</a>
-      <a href="https://github.com/szymczakwojciech">GitHub</a>
+  </header>
+
+  <main class="container">
+    <div class="profile" id="about">
+      <img class="avatar" src="/images/Szymczak_ZDJ.jpg" alt="Photo of Wojciech Szymczak" width="200" height="200">
+      <h1>Wojciech Szymczak</h1>
+      <p class="role">PhD Student in Economics<br>Department of Economics<br>Uppsala University</p>
+      <ul class="social">
+        <li><a href="mailto:wojciech.szymczak@nek.uu.se" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+        <li><a href="https://scholar.google.com/citations?user=w1tir28AAAAJ&amp;hl=pl" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/szymczakwojciech" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+        <li><a href="/files/CV_Szymczak.pdf" aria-label="CV (PDF)"><i class="ai ai-cv" aria-hidden="true"></i></a></li>
+      </ul>
     </div>
-  </aside>
-  <main class="page">
-    <article class="content">
-      {{ content }}
-      <p class="copyright">© {{ site.time | date: '%Y' }} Wojciech Szymczak</p>
-    </article>
+
+    {{ content }}
+
+    <figure class="painting">
+      <img src="/images/bociany-chelmonski.jpg"
+           onerror="this.onerror=null;this.src='https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/J%C3%B3zef_Che%C5%82mo%C5%84ski_-_Bociany_-_01_%28MP_561_MNW%29.jpg/1920px-J%C3%B3zef_Che%C5%82mo%C5%84ski_-_Bociany_-_01_%28MP_561_MNW%29.jpg';"
+           alt="Józef Chełmoński, Storks (Bociany), 1900: peasants in a field watching storks fly overhead"
+           loading="lazy" width="1400" height="1066">
+      <figcaption>Józef Chełmoński, <span lang="pl">Bociany</span> (Storks), 1900. National Museum in Warsaw.</figcaption>
+    </figure>
+
+    <footer>
+      © {{ site.time | date: '%Y' }} Wojciech Szymczak · <a href="#top">Back to top</a>
+    </footer>
   </main>
+
+  <script>
+    // Light / dark toggle
+    (function () {
+      var btn = document.querySelector('.theme-toggle');
+      var icon = btn.querySelector('i');
+      function isDark() {
+        var t = document.documentElement.getAttribute('data-theme');
+        return t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+      function sync() { icon.className = isDark() ? 'fas fa-sun' : 'fas fa-moon'; }
+      btn.addEventListener('click', function () {
+        var next = isDark() ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        sync();
+      });
+      sync();
+    })();
+
+    // Abstract toggles
+    document.querySelectorAll('button[aria-controls]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var box = document.getElementById(b.getAttribute('aria-controls'));
+        var open = b.getAttribute('aria-expanded') === 'true';
+        b.setAttribute('aria-expanded', String(!open));
+        box.hidden = open;
+      });
+    });
+
+    // Highlight the current section in the menu
+    (function () {
+      var links = document.querySelectorAll('.menu a[data-section]');
+      var ids = Array.prototype.map.call(links, function (a) { return a.dataset.section; });
+      function onScroll() {
+        var current = 'about';
+        ids.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el && el.getBoundingClientRect().top < 120) current = id;
+        });
+        links.forEach(function (a) { a.classList.toggle('active', a.dataset.section === current); });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 </body>
 </html>
