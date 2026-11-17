@@ -23,7 +23,7 @@ permalink: /
 <h2>Publications</h2>
 
 <article class="paper">
-  <h3><a href="https://onlinelibrary.wiley.com/doi/10.1111/irel.70017">Automation, Trade Unions and Atypical Employment</a></h3>
+  <h3><a href="https://doi.org/10.1111/irel.70017">Automation, Trade Unions and Atypical Employment</a></h3>
   <p class="meta">with Piotr Lewandowski</p>
   <p class="meta"><em>Industrial Relations: A Journal of Economy and Society</em>, 2026, 65(3): 378–396</p>
 </article>
