@@ -14,7 +14,7 @@ permalink: /
 <h2>Working Papers</h2>
 
 <article class="paper">
-  <h3>Entry Motivations Shape Preferences for Social Protection Among Platform Workers</h3>
+  <h3><a href="https://ibs.org.pl/wp-content/uploads/2026/07/Preferences_social_protection_platform_workers_IBS_WP05-2026.pdf">Entry Motivations Shape Preferences for Social Protection Among Platform Workers</a></h3>
   <p class="meta">with Zuzanna Kowalik, Piotr Lewandowski, Fabrizio Pompei, Holger Stichnoth and Laurène Thil</p>
 </article>
 </section>
@@ -23,7 +23,7 @@ permalink: /
 <h2>Publications</h2>
 
 <article class="paper">
-  <h3>Automation, Trade Unions and Atypical Employment</h3>
+  <h3><a href="https://onlinelibrary.wiley.com/doi/10.1111/irel.70017">Automation, Trade Unions and Atypical Employment</a></h3>
   <p class="meta">with Piotr Lewandowski</p>
   <p class="meta"><em>Industrial Relations: A Journal of Economy and Society</em>, 2026, 65(3): 378–396</p>
 </article>
