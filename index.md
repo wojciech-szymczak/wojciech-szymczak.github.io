@@ -29,6 +29,13 @@ permalink: /
 </article>
 </section>
 
+<section id="progress">
+<h2>Work in progress</h2>
+<article class="paper">
+  <h3>Intergenerational Mobility When Markets Specialize: Evidence from Poland</h3>
+</article>
+</section>
+
 <section id="contact">
 <h2>Contact</h2>
 <p><a href="mailto:wojciech.szymczak@nek.uu.se">wojciech.szymczak@nek.uu.se</a><br>
